@@ -219,11 +219,11 @@ public class HorizontalStepsViewIndicator extends View
 
             StepBean stepsBean = mStepBeanList.get(i);
 
-            if(stepsBean.getState()==StepBean.STEP_UNDO)
+            if(stepsBean.getState()==StepBean.STEP_CURRENT)
             {
                 mDefaultIcon.setBounds(rect);
                 mDefaultIcon.draw(canvas);
-            }else if(stepsBean.getState()==StepBean.STEP_CURRENT)
+            }else if(stepsBean.getState()==StepBean.STEP_UNDO)
             {
                 mCompletedPaint.setColor(Color.WHITE);
                 canvas.drawCircle(currentComplectedXPosition, mCenterY, mCircleRadius * 1.1f, mCompletedPaint);
